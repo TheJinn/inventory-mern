@@ -27,8 +27,7 @@ app.use(morgan('dev'));
 app.use(express.json({ limit: '1mb' }));
 app.use(cookieParser());
 
-const origin = process.env.CLIENT_ORIGIN || 'http://localhost:5173';
-app.use(cors({ origin, credentials: true }));
+app.use(cors());
 
 // No local image storage; images are stored in Cloudinary only.
 
