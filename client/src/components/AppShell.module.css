@@ -1,0 +1,132 @@
+.wrap{display:flex;min-height:100vh}
+.sidebar{
+  width:260px;
+  background:#242531;
+  border-right:1px solid rgba(255,255,255,.08);
+  padding:18px 16px;
+  position:sticky;
+  top:0;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.brand{display:flex;gap:12px;align-items:center;padding:8px 8px 16px}
+.logo{width:40px;height:40px;object-fit:contain}
+.brandText{line-height:1.1}
+.brandName{font-weight:800;color:#ffffff}
+.brandSub{font-size:12px;color:rgba(255,255,255,.65)}
+.nav{display:flex;flex-direction:column;gap:8px;padding-top:6px;flex:1}
+.link{padding:12px 12px;border-radius:14px;color:rgba(255,255,255,.75);text-decoration:none;font-weight:700}
+.link:hover{background:rgba(255,255,255,.06);color:#fff}
+.active{background:rgba(255,255,255,.10);color:#ffffff}
+
+.linkInner{display:flex;align-items:center;gap:10px}
+.linkIcon{width:18px;height:18px;display:inline-flex;color:rgba(255,255,255,.85)}
+
+.userSection{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);position:relative}
+.userButton{
+  width:100%;
+  background:transparent;
+  border:0;
+  padding:12px 10px;
+  border-radius:14px;
+  color:#fff;
+  font-weight:800;
+  text-align:left;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.userButton:hover{background:rgba(255,255,255,.08)}
+.userName{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:190px}
+.userMenu{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:62px;
+  background:#2b2c38;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 14px 40px rgba(0,0,0,.35);
+}
+.userMenuItem{
+  width:100%;
+  background:transparent;
+  border:0;
+  padding:12px 12px;
+  text-align:left;
+  font-weight:800;
+  color:#fff;
+  cursor:pointer;
+}
+.userMenuItem:hover{background:rgba(255,255,255,.08)}
+.main{flex:1;display:flex;flex-direction:column;background:#424457}
+.mobileTopbar{display:none}
+.content{padding:0 22px 90px}
+.mobileNav{display:none}
+
+@media (max-width: 900px){
+  .sidebar{display:none}
+
+  .mobileTopbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:64px;
+    padding:10px 14px;
+    background:#424457;
+    z-index:50;
+  }
+
+  .mobileLogo{width:38px;height:38px;object-fit:contain}
+
+  .mobileUser{position:relative}
+  .mobileUserButton{
+    background:transparent;
+    border:0;
+    color:#fff;
+    font-weight:900;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    padding:10px 12px;
+    border-radius:14px;
+    max-width:70vw;
+  }
+  .mobileUserButton:hover{background:rgba(255,255,255,.08)}
+  .mobileUserName{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:55vw}
+
+  .mobileUserMenu{
+    position:absolute;
+    right:0;
+    top:56px;
+    min-width:160px;
+    background:#2b2c38;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 14px 40px rgba(0,0,0,.35);
+  }
+
+  .content{padding:78px 14px 90px}
+  .mobileNav{
+    display:flex;
+    position:fixed;
+    left:0;right:0;bottom:0;
+    background:#424457;
+    border-top:1px solid var(--line);
+    padding:10px;
+    gap:8px;
+    justify-content:space-between;
+  }
+  .mLink{flex:1;text-align:center;text-decoration:none;color:var(--muted);font-size:12px;font-weight:800;padding:10px 8px;border-radius:14px}
+  .mActive{background:rgba(29,78,216,0.10);color:var(--primary)}
+  .mIcon{color: #fff;}
+}

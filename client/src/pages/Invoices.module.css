@@ -1,0 +1,149 @@
+.page{display:flex;flex-direction:column;gap:18px}
+
+/* Header row (same as Home/Products) */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 22px 0;gap:16px;}
+.pageTitle{font-size:22px;font-weight:900;color:#ffffff}
+.searchPill{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.12);border-radius:9999px;padding:10px 14px;min-width:360px;}
+.searchIcon{display:inline-flex;opacity:0.9;color:#fff}
+.searchInput{border:0;outline:none;background:transparent;color:#fff;font-weight:700;width:100%}
+.searchInput::placeholder{color:rgba(255,255,255,0.75);font-weight:700}
+.headerLine{height:2px;background:rgba(255,255,255,.55);margin-bottom:18px;border-radius:2px}
+.state{padding:10px;color:var(--muted);font-weight:700}
+.error{padding:10px;border-radius:12px;border:1px solid rgba(239,68,68,0.25);background:rgba(239,68,68,0.08);color:#b91c1c;font-weight:800}
+
+/* Overall card */
+.overallCard{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 20px rgba(17,24,39,0.04);padding:18px}
+.overallTitle{font-size:20px;font-weight:900;color:var(--text);margin-bottom:14px}
+.metricsRow{display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr 1px 1fr;gap:18px;align-items:center}
+.divider{width:1px;height:54px;background:rgba(148,163,184,0.35);justify-self:center}
+.metricTitle{font-size:14px;font-weight:800;color:var(--text);margin-bottom:10px}
+.metricGrid{display:flex;justify-content:space-between;gap:14px;align-items:flex-end}
+.metricLeft{display:flex;flex-direction:column;gap:6px}
+.metricMain{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.metricRightCol{display:flex;flex-direction:column;align-items:flex-end;gap:6px;min-width:68px}
+.metricRight{font-size:18px;font-weight:900;color:var(--text);line-height:1}
+.metricSub{font-size:13px;color:var(--muted)}
+.metricSubRight{font-size:13px;color:var(--muted);text-align:right}
+
+/* Table */
+.tableCard{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 20px rgba(17,24,39,0.04);overflow:visible}
+.tableTitle{padding:16px 18px;font-size:20px;font-weight:900;color:var(--text)}
+.tableHead{display:grid;grid-template-columns:1fr 1.4fr 0.9fr 0.9fr 0.9fr 52px;gap:12px;padding:14px 18px;background:rgba(148,163,184,0.35);font-weight:900;color:var(--text);font-size:14px}
+.headRight{text-align:right}
+.row{display:grid;grid-template-columns:1fr 1.4fr 0.9fr 0.9fr 0.9fr 52px;gap:12px;align-items:center;padding:14px 18px;border-top:1px solid rgba(229,231,235,0.7)}
+.cell{font-size:14px;color:var(--text)}
+.cellRight{position:relative;display:flex;justify-content:flex-end}
+.invId{font-weight:400;color:#374151}
+.ref{font-weight:800;color:#111827}
+.amount{font-weight:900}
+.statusText{text-transform:capitalize;color:#374151;font-weight:700}
+.due{color:#374151}
+
+.dotsBtn{width:34px;height:34px;border-radius:10px;border:0;background:transparent;color:#111827;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.dotsBtn:hover{background:rgba(148,163,184,0.18)}
+
+/* Action menu (positioned absolute via inline style) */
+.menu{position:absolute;z-index:50;right:0;top:38px}
+.menuBarUnpaid{display:flex;align-items:center;gap:10px;background:#ef4444;color:#fff;border:0;border-radius:8px;height:42px;padding:0 14px;min-width:150px;box-shadow:0 18px 35px rgba(17,24,39,0.18);cursor:pointer;font-weight:900}
+.menuBarPaid{display:flex;align-items:center;gap:10px;background:#16a34a;color:#fff;border:0;border-radius:8px;height:42px;padding:0 14px;min-width:150px;box-shadow:0 18px 35px rgba(17,24,39,0.18);font-weight:900}
+.menuBarUnpaid:disabled{opacity:0.75;cursor:not-allowed}
+.menuBox{background:#fff;border-radius:10px;border:1px solid rgba(229,231,235,0.9);box-shadow:0 18px 35px rgba(17,24,39,0.18);min-width:170px;overflow:hidden}
+.menuItem{width:100%;display:flex;align-items:center;gap:10px;padding:12px 12px;border:0;background:#fff;cursor:pointer;font-weight:800;color:#111827}
+.menuItem:hover{background:rgba(148,163,184,0.14)}
+.confirmPopover{background:#fff;border-radius:16px;border:1px solid rgba(229,231,235,0.95);box-shadow:0 25px 60px rgba(17,24,39,0.18);width:420px;padding:18px 18px 14px}
+.confirmText{font-size:16px;font-weight:600;color:#111827;margin-bottom:18px}
+.confirmBtns{display:flex;justify-content:flex-end;gap:14px}
+.cancelBtn{height:42px;min-width:120px;border-radius:12px;border:1px solid rgba(229,231,235,0.95);background:#f3f4f6;color:#9ca3af;font-weight:700;cursor:pointer}
+.confirmBtn{height:42px;min-width:140px;border-radius:12px;border:0;background:#111827;color:#fff;font-weight:700;cursor:pointer}
+
+.miniIcon{width:22px;height:22px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;color:#fff}
+.miniRed{background:#b91c1c}
+.miniGreen{background:#16a34a}
+.miniBlue{background:#0ea5e9}
+.miniOrange{background:#f97316}
+.miniGreen{background:#16a34a}
+
+/* Pagination */
+.pager{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-top:1px solid rgba(229,231,235,0.7)}
+.pageBtn{height:34px;padding:0 16px;border-radius:6px;border:1px solid rgba(229,231,235,0.9);background:#fff;font-weight:800;color:#374151;cursor:pointer}
+.pageBtn:disabled{opacity:0.5;cursor:not-allowed}
+.pageText{font-weight:800;color:#6b7280}
+
+/* Invoice view overlay (blur background like design) */
+.overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,0.35);
+  /* blur whatever is behind the overlay */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+.overlayInner{width:min(860px, 100%);max-height:unset;overflow:visible}
+.invoiceCardWrap{position:relative;padding-right:84px}
+.invoiceActions{position:absolute;right:210px;top:35px;display:flex;flex-direction:column;gap:12px;z-index:70}
+.actionCircle{width:44px;height:44px;border-radius:999px;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 28px rgba(17,24,39,0.18)}
+.closeCircle{background:#fb923c}
+.downloadCircle{background:#38bdf8}
+.printCircle{background:#facc15}
+.actionCircle:disabled{opacity:0.6;cursor:not-allowed}
+
+.invoiceCard{background:var(--card);border-radius:22px;border:1px solid rgba(229,231,235,0.9);box-shadow:0 18px 50px rgba(17,24,39,0.18);padding:28px;width:600px;max-width:100%;height:700px;max-height:100%;overflow-y:auto;overflow-x:hidden}
+.invoiceLoading{padding:16px;font-weight:800;color:var(--muted)}
+.invoicePaper{background:#fff;border-radius:12px;padding:22px}
+.invoiceHeader{border-bottom:1px solid rgba(229,231,235,0.9);padding-bottom:14px}
+.invoiceTitle{font-size:26px;font-weight:900;letter-spacing:0.02em;color:#111827}
+.billGrid{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rightAddr{text-align:right}
+.smallLabel{font-size:11px;color:#6b7280;font-weight:800;margin-bottom:6px}
+.addrLine{font-size:12px;color:#111827;line-height:1.35}
+
+/* Portrait layout like design: left meta, right items */
+.bodyGrid{margin-top:8px;display:grid;grid-template-columns:190px 1fr;gap:30px;align-items:start}
+.metaCol{display:flex;flex-direction:column;gap:10px;width:190px}
+.metaRow{display:flex;justify-content:space-between;gap:10px}
+.metaKey{font-size:12px;color:#6b7280;font-weight:800}
+.metaVal{font-size:12px;color:#111827;font-weight:900}
+
+.itemsTable{justify-self:end;max-width:520px;border:1px solid rgba(229,231,235,0.9);border-radius:10px;overflow:hidden}
+.itemsHead{display:grid;grid-template-columns:1fr 90px 140px;gap:10px;padding:12px 14px;background:rgba(148,163,184,0.18);font-size:12px;font-weight:900;color:#111827}
+.itemsRow{display:grid;grid-template-columns:1fr 90px 140px;gap:10px;padding:12px 14px;border-top:1px solid rgba(229,231,235,0.8);font-size:12px;color:#111827}
+.prodName{font-weight:800}
+.center{text-align:center}
+.right{text-align:right}
+.qty{font-weight:800}
+.price{font-weight:900}
+
+.itemsTotals{padding:14px;border-top:1px solid rgba(229,231,235,0.9)}
+.totalLine{display:flex;justify-content:space-between;font-size:12px;color:#111827;padding:4px 0}
+.totalLine span:first-child{color:#6b7280;font-weight:800}
+.totalLine span:last-child{font-weight:900}
+.totalDue{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;font-weight:900;color:#0ea5e9}
+.payNote{padding:10px 14px;font-size:11px;color:#6b7280;border-top:1px solid rgba(229,231,235,0.8)}
+
+.invoiceFooter{display:flex;justify-content:space-between;padding:16px 4px 0;font-size:11px;color:#6b7280}
+
+/* Delete confirm */
+.confirmWrap{position:fixed;inset:0;z-index:70;pointer-events:none}
+.confirmBox{pointer-events:auto;position:fixed;right:82px;bottom:82px;width:min(520px, calc(100% - 40px));background:var(--card);border-radius:18px;border:1px solid rgba(229,231,235,0.9);box-shadow:0 18px 35px rgba(17,24,39,0.18);padding:18px}
+.confirmText{font-size:14px;font-weight:800;color:#111827;padding:8px 6px 18px}
+.confirmBtns{display:flex;justify-content:flex-end;gap:12px}
+.cancelBtn{height:38px;min-width:130px;border-radius:10px;border:1px solid rgba(229,231,235,0.9);background:#f3f4f6;color:#9ca3af;font-weight:900;cursor:pointer}
+.confirmBtn{height:38px;min-width:130px;border-radius:10px;border:1px solid rgba(229,231,235,0.9);background:#111827;color:#fff;font-weight:900;cursor:pointer}
+.cancelBtn:disabled,.confirmBtn:disabled{opacity:0.6;cursor:not-allowed}
+
+@media (max-width: 1100px){
+  .invoiceActions{right:10px;top:14px;flex-direction:row}
+}
+
+@media (max-width: 980px){
+  .metricsRow{grid-template-columns:1fr;gap:14px}
+  .divider{display:none}
+  .tableHead,.row{grid-template-columns:1fr 1fr 1fr 52px}
+  .tableHead > :nth-child(4), .tableHead > :nth-child(5){display:none}
+  .row > :nth-child(4), .row > :nth-child(5){display:none}
+}

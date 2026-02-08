@@ -1,0 +1,4 @@
+@import "./styles/global.css";
+
+/* small base tweaks */
+#root{min-height:100vh}

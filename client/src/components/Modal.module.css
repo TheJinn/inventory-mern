@@ -1,0 +1,14 @@
+.backdrop{position:fixed;inset:0;background:rgba(17,24,39,0.45);display:flex;align-items:center;justify-content:center;padding:18px;z-index:50}
+
+/*
+  Modal shell is intentionally flexible:
+  - children can define their own width (eg 820px form)
+  - modal never exceeds viewport
+  - body scrolls if content is taller than viewport
+*/
+.modal{width:auto;max-width:calc(100vw - 36px);max-height:calc(100vh - 36px);background:#fff;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden}
+.head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line)}
+.title{font-weight:900;color:var(--text)}
+.close{border:0;background:transparent;font-size:18px;cursor:pointer;color:var(--muted)}
+.body{padding:16px;overflow:auto}
+.bodyNoHead{padding:0;overflow:auto}
