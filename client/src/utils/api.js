@@ -25,7 +25,7 @@ async function request(path, opts = {}) {
     }
   }
 
-  const res = await fetch('${BASE_URL}${path}', { method, headers, body: fetchBody });
+  const res = await fetch(`${BASE_URL}${path}`, { method, headers, body: fetchBody });
   const text = await res.text();
   let data = null;
   try {
