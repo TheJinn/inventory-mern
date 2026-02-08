@@ -7,6 +7,8 @@ export function setToken(token) {
   else localStorage.removeItem('token');
 }
 
+const BASE_URL = import.meta.env.VITE_API_URL || "";
+
 async function request(path, opts = {}) {
   const { method = 'GET', body, isForm = false } = opts;
   const headers = {};
@@ -23,7 +25,7 @@ async function request(path, opts = {}) {
     }
   }
 
-  const res = await fetch(path, { method, headers, body: fetchBody });
+  const res = await fetch('${BASE_URL}${path}', { method, headers, body: fetchBody });
   const text = await res.text();
   let data = null;
   try {
